@@ -4,16 +4,35 @@ note.muの記事をダウンロードして保存するだけのPythonスクリ�
 
 ## 使い方
 
+### 特定の記事を保存する場合
+
 コマンドラインから以下のように実行します。
 
 python note-downloader.py {note_id}
 
 {note_id} はnoteの記事URLの末尾につくIDです。
 
+
+### マガジンに所属する記事全てを保存する場合
+
+python note-magazine-downloader.py {magazine_id}
+
+{magazine_id} はnoteのマガジンのURLの末尾につくIDです。
+
+
 ### 例:
 
-https://note.mu/bakera/n/nefa5dd4a64db を保存するなら、
+記事 https://note.mu/bakera/n/nefa5dd4a64db を保存するなら、
+
+```bash
 python note-downloader.py nefa5dd4a64db
+```
+
+マガジン https://blog.bengo4.com/m/mefab063665cc 全体を保存するなら、
+
+```bash
+python note-magazine-downloader.py mefab063665cc
+```
 
 
 ## 保存されるファイル
