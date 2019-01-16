@@ -2,7 +2,9 @@
 
 note.muの記事をダウンロードして保存するだけのPythonスクリプト
 
-## Usage
+## 使い方
+
+コマンドラインから以下のように実行します。
 
 python note-downloader.py {note_id}
 
@@ -12,3 +14,11 @@ python note-downloader.py {note_id}
 
 https://note.mu/bakera/n/nefa5dd4a64db を保存するなら、
 python note-downloader.py nefa5dd4a64db
+
+
+## 保存されるファイル
+
+{note_id}.html というファイル名のファイルがカレントディレクトリに作られます。
+中身は note のAPIから取得した記事本文のHTML断片です。
+断片を単にそのまま保存するので、正当なHTMLにはなっていません。
+必要に応じて外側のHTMLを追加する必要があります。
