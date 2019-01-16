@@ -19,8 +19,7 @@ json_data = json.loads(response)
 body = json_data['data']['body']
 filename = id + '.html'
 
-file = open(filename, 'w')
-file.write(body.encode('UTF-8'))
-file.close()
+with open(filename, 'w') as fp:
+    fp.write(body.encode('UTF-8'))
 
 print('saved:' + filename)
